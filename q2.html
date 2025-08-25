@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Ascending Validator</title></head>
+<body>
+<input id="num" placeholder="1234">
+<button onclick="check()">Validate</button>
+<p id="out"></p>
+
+<script>
+function check(){
+  let n=document.getElementById("num").value;
+  if(!/^\d{4}$/.test(n) || n[0]==0) return out("Invalid number");
+  for(let i=1;i<4;i++) if(n[i]<=n[i-1]) return out("Not ascending");
+  out("Valid ✅");
+}
+function out(msg){document.getElementById("out").innerText=msg;}
+</script>
+</body>
+</html>

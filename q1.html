@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head><title>Course Registration</title></head>
+<body>
+<h2>Course Registration</h2>
+<form onsubmit="return validateForm()">
+  ID: <input id="sid"><br>
+  Name: <input id="sname"><br>
+  Course: 
+  <select id="course">
+    <option>CS101</option>
+    <option>CS102</option>
+  </select><br>
+  <button type="submit">Register</button>
+</form>
+<p id="msg"></p>
+
+<script>
+function validateForm(){
+  let id=document.getElementById("sid").value.trim();
+  let name=document.getElementById("sname").value.trim();
+  if(id==""||name==""){document.getElementById("msg").innerText="Fill all fields";return false;}
+  document.getElementById("msg").innerText="Registered Successfully!";
+  return false;
+}
+</script>
+</body>
+</html>

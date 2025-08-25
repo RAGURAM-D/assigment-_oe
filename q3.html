@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gallery</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+img{width:200px;height:150px;margin:5px;opacity:.7;transition:.3s;}
+.active{opacity:1;transform:scale(1.2);}
+</style>
+</head>
+<body>
+<button onclick="show('#i1')">Img1</button>
+<button onclick="show('#i2')">Img2</button>
+<br>
+<img id="i1" src="https://picsum.photos/200/150?1">
+<img id="i2" src="https://picsum.photos/200/150?2">
+
+<script>
+function show(id){
+  $("img").removeClass("active");
+  $(id).addClass("active");
+}
+</script>
+</body>
+</html>
